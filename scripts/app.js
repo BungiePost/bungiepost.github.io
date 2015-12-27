@@ -12,7 +12,7 @@
                 beforeSend: function (request) {
                     request.setRequestHeader("X-API-Key", '3eda8b18517c46c7bde4924f42562c40');
                 },
-                url: 'https://crossorigin.me/http://www.bungie.net/Platform/User/SearchUsers/?q=' + $("#searchUser").val(),
+                url: 'http://bungie-platform.herokuapp.com/proxy/User/SearchUsers/?q=' + $("#searchUser").val(),
                 success: function( data ) {
                     response(data.Response);
                 }
@@ -145,7 +145,7 @@
                 beforeSend: function (request) {
                     request.setRequestHeader("X-API-Key", '3eda8b18517c46c7bde4924f42562c40');
                 },
-                url: 'https://crossorigin.me/http://www.bungie.net/Platform/User/GetBungieNetUserById/' + uid + '/',
+                url: 'http://bungie-platform.herokuapp.com/proxy/User/GetBungieNetUserById/' + uid + '/',
                 success: function (data, textStatus, request) {
                     that.set("currentUser", data.Response.displayName);
                     that.set("currentUid", "User ID: " + data.Response.membershipId);
@@ -178,7 +178,7 @@
                         request.setRequestHeader("X-API-Key", '3eda8b18517c46c7bde4924f42562c40');
                     },
                     //url: 'https://www.bungie.net/Platform/Activity/User/' + id + '/Activities/LikeShareAndForum/?lc=en&fmt=true&lcin=true&itemsperpage=5&currentpage=' + i + '&format=0',
-                    url: 'https://crossorigin.me/https://www.bungie.net/Platform/Activity/User/' + id + '/Activities/Forums/?lc=en&fmt=true&lcin=true&itemsPerPage=20&currentpage=' + i + '&format=0',
+                    url: 'http://bungie-platform.herokuapp.com/proxy/Activity/User/' + id + '/Activities/Forums/?lc=en&fmt=true&lcin=true&itemsPerPage=20&currentpage=' + i + '&format=0',
                     //url: 'http://www.bungie.net/Platform/Forum/GetPostAndParent/181112134/',             THIS GETS SPECIFIED POSTS
                     success: function (data, textStatus, request) {
                         counter++;
