@@ -1,0 +1,157 @@
+﻿html {
+    margin: 0;
+    min-width: 100%;
+    min-height: 100%;
+    padding:0;
+}
+
+body {
+    margin:0; padding:0;
+    color: #ffffff;
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 30px 30px 30px;
+}
+
+/*#overlay{
+background:rgba(0, 0, 0, 0.5);
+z-index: 10000000000000;   
+ 
+}*/
+
+#searchUser {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 20px;
+    background-color:rgba(0, 0, 0, 0.65);
+}
+
+header {
+    width: 100%;
+}
+
+
+.post {
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 60px;
+}
+
+.post-details {
+    float: right;
+    padding: 15px;
+}
+
+.post-details a {
+    margin-right: 15px;
+}
+
+.post p {
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+.button {
+    color: #FFF;
+    background: #479ce4;
+    border: 1px solid #317DB8;
+    /*box-shadow: 0 2px 5px -1px ;*/
+        cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    min-width: 60px;
+    padding: 0 8px;
+    text-align: center;
+    text-transform: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#userAvatar {
+    background-color: #808080;
+    margin: 0 auto;
+}
+
+#userDetails {
+    margin-top: 20px;
+    vertical-align: top;
+}
+
+#userDetails * {
+    display: block;
+}
+
+.detail {
+    margin-top: 15px;
+}
+
+#userCard {
+    width: 400px;
+    display:block;
+    line-height: 1;
+    /* start of new stuff */
+    /*margin: 50px;
+    margin-top: -200px;*/
+
+    padding-top: 50px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#username {
+    font-size: 2em;
+
+}
+
+#userCard > * {
+   /*display: inline-block;*/
+
+   display: block;
+}
+
+#sidenav {
+        display: inline-block;
+    top: 0;
+    margin: 0;
+    min-height: 100%;
+    background-color: #0094ff;
+    width: 240px;
+}
+
+.container { 
+    display: inline-block;
+    position:relative; 
+    padding:0 0 0 55px; }
+
+#sidebar {
+    position:absolute;
+    top:0; bottom:0; left:0;
+    width:50px;
+    background:#000;
+}
+
+#header { 
+    width:auto; 
+    height:auto; 
+    margin:0 0 5px 0;
+}
+#content {  
+    width:auto; 
+    height:auto;
+    margin:5px 0 5px 0;
+}
+#footer { 
+    width:auto; 
+    height:auto;
+    margin:5px 0 0 0;
+}

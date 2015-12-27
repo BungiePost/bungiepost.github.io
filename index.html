@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bungie Profiler</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles/kendo.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/materialize.css">
+</head>
+<body id="main">
+    <main>
+        <div id="overlay">
+            <div id="banner" class="row">
+                <div id="userCard">
+                    <img id="userAvatar" width="120" height="120" data-bind="attr: { src: userAvatar }" />
+                    <div id="userDetails">
+                        <span id="username" data-bind="text: currentUser"></span>
+                        <span class="detail" data-bind="text: currentUserAge"></span>
+                    </div>
+                </div>
+
+                <input placeholder="Search for a Bungie.net user..." id="searchUser" type="text" />
+            </div>
+        </div>
+        <!--<div class="row">
+            <span>Number of pages to search (8 or 9 results per page)</span>
+            <input id="numberOfPages" value="1" type="text" />
+        </div>-->
+        <!--<canvas id="myChart" width="200" height="200"></canvas>-->
+
+        <ul id="postList" data-template="historyTemplate" data-bind="source: postHistoryDS"></ul>
+    </main>
+
+    <script id="historyTemplate" type="text/x-kendo-template">
+        <li class="post">
+            <div class="post-details">
+                <a data-bind="attr: { href: url }" class="button">View Thread</a>
+                <span>#= kendo.toString(new Date(dateposted), "D") #</span>
+            </div>
+            <p>#= text #</p>
+
+        </li>
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script src="js/kendo.ui.core.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+</body>
+</html>
